@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+          background-color: #b8cce0;
+          font-family: Arial, sans-serif;
+          color: white;
+        }
+        .container1 {
+            background-color: rgb(70, 87, 117);
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            
+        }
+        h1 {
+            text-align: center;
+        
+        }
+       .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+       }
+       button {
+        font-size: 24px;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin: 20px;
+        cursor: pointer;
+        background-color: #3ddb84;
+      }
+
+      button:hover {
+        background-color: #081f3f;
+        color: white;
+      }
+      #count {
+        font-size: 36px;
+        font-weight: bold;
+        margin: 0 20px;
+      }
+     input {
+        border-radius: 5px;
+        padding: 20px 20px;
+     }
+     .set-amount {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+        </style>
+</head>
+<body>
+    <div class="container1">
+        <h1>Counter</h1>
+        <div class="button">
+        <button id="decrease">-</button>
+        <span  id="count">0</span>
+        <button id="increase">+</button>
+    </div>
+       <div class="set-amount">
+        <input type="number" placeholder="Please enter an amount" id="amount">
+        <button id="setBtn">set</button>
+       </div>
+    </div>
+
+    <script>
+        const counter = document.getElementById("count");
+        const increase = document.getElementById("increase");
+        const decrease = document.getElementById("decrease");
+        const set = document.getElementById("setBtn");
+        const amount = document.getElementById("amount");
+        let actionAmount = 1;
+        set.onclick = () => {
+            actionAmount = amount;
+        }
+        increase.onclick = () => {
+            counter.innerHTML = parseInt(counter.innerHTML) + parseInt(actionAmount.value);
+        }
+        decrease.onclick = () => {
+            if (counter.innerHTML > 0) {
+            counter.innerHTML = parseInt(counter.innerHTML) - parseInt(actionAmount.value);
+            }
+        }
+        
+    </script>
+</body>
+</html>
