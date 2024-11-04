@@ -1,4 +1,4 @@
-# How to make a repo and upload it to github?
+# How to make a repo and upload it to Github?
 *This is a simple test from Level0-week2* 
 
 ### 1. Create your repo on Github
@@ -13,15 +13,15 @@ The Github UI is easy to use, just click on new repo and choose if it will be pu
 
 ### 3. Create your files
 
-Like the README file, or others uo to the language your are using
+Like the README file, or others up to the language your are using
 
 ### 4. Stage your changes
 
 Use the cmd `git add .` to add everything, or simply `git add README.md` to add changes of a specific file (the README file in this case)
 
-### 5. Commit your changes with a meaningful message as a best practice
+### 5. Commit your changes with a meaningful message as best practices
 
-Use the cmd `git commit -m "First version of the README file` 
+Use the cmd `git commit -m "First version of the README file"` 
 
 ### 6. Push them to the remote repo
 
